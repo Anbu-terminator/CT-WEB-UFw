@@ -1,11 +1,11 @@
-version: '3.8'
 services:
   web:
     build: .
     ports:
       - "3000:3000"
     environment:
-      NODE_ENV: production
-      RAZORPAY_KEY_ID: ${rzp_test_uGpEIbyl9tXtTH}
-      RAZORPAY_SECRET_KEY: ${Ui7CXnrutIKk0Ufrp9dM1NzH}
+      - NODE_ENV=production
+      - RAZORPAY_KEY_ID=rzp_test_uGpEIbyl9tXtTH
+      - RAZORPAY_SECRET_KEY=Ui7CXnrutIKk0Ufrp9dM1NzH
+      - RAZORPAY_WEBHOOK_SECRET=test_webhook_secret
     

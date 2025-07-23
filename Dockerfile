@@ -7,9 +7,9 @@ COPY client/package.json client/package-lock.json ./client/
 RUN npm ci --prefix client
 
 # Install server dependencies
-COPY server/package.json ./server/
+COPY server/package*.json ./server/
 WORKDIR /app/server
-RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+RUN npm ci --production
 WORKDIR /app
 
 # Copy source files
