@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hotelbooker
+    runtime: docker
+    plan: standard
+    region: singapore
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RAZORPAY_KEY_ID
+        value: ${rzp_test_uGpEIbyl9tXtTH}
+      - key: RAZORPAY_SECRET_KEY
+        value: ${Ui7CXnrutIKk0Ufrp9dM1NzH}
+    dockerfilePath: Dockerfile
+    autoDeploy: true

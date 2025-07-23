@@ -1,0 +1,63 @@
+{
+  "name": "BOOK NEO - Premium Hotel Booking",
+  "short_name": "BOOK NEO",
+  "description": "Book premium hotels with secure payments and instant confirmations",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#6366F1",
+  "background_color": "#FFFFFF",
+  "categories": ["travel", "lifestyle", "productivity"],
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=192&h=192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=512&h=512",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=390&h=844",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Hotel",
+      "short_name": "Book",
+      "description": "Book a hotel room",
+      "url": "/booking",
+      "icons": [
+        {
+          "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=96&h=96",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Hotel Dashboard",
+      "short_name": "Dashboard",
+      "description": "Access hotel management",
+      "url": "/hotel-login",
+      "icons": [
+        {
+          "src": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=96&h=96",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

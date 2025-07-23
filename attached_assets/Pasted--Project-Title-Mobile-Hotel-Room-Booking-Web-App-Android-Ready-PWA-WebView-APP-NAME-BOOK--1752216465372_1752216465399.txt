@@ -1,0 +1,97 @@
+🔧 Project Title: Mobile Hotel Room Booking Web App – Android Ready (PWA/WebView)
+
+APP NAME: BOOK NEO
+
+📱 Description:
+Build a mobile-optimized hotel room booking web application using HTML, CSS, JavaScript, advanced animation with gsap animation with some neon effect, **MongoDB only** (for storing all hotel data, users, and bookings), and **Cashfree** (for secure payments). The app will be fully responsive, PWA-ready, and can be published on the Play Store or wrapped via Android WebView.
+
+
+🛎️ Functional Flow:
+
+1. **Splash Screen (`index.html`)**
+   - Fullscreen hotel logo
+   - Wait 3 seconds
+   - Auto-redirect to `home.html`
+
+2. **Main Menu (`home.html`)**
+   - Three large buttons:
+     - **User Booking** → `booking.html`
+     - **Hotel Login** → `hotel-login.html`
+     - **Admin Login** → `admin-login.html`
+
+3. **User Booking (`booking.html`)**
+   - Dropdown: Hotel selection, room types
+   - Input: Guest name, contact number, check-in/out dates, optional notes
+   - Pay via **Cashfree Web Checkout**
+     - ✅ App ID: `9932874f93878c209926363eb3782399`
+     - ✅ Secret Key: `cfsk_ma_prod_ecee2e35c6aee2ed204a5aa421aed9df_4aaad1e2`
+   - On payment success:
+     - Generate **unique Booking ID**
+     - Save full booking info to **MongoDB**
+     - Redirect to `booking-success.html`
+   - On failure: Redirect to `booking-failure.html`
+
+4. **Hotel Login (`hotel-login.html`)**
+   - Login using MongoDB stored credentials
+   - On success → `hotel-dashboard.html`
+   - MongoDB URL:  
+     `mongodb+srv://bastoffcial:aI4fEcricKXwBZ4f@speedo.swuhr8z.mongodb.net/`
+
+5. **Hotel Dashboard (`hotel-dashboard.html`)**
+   - View current & past bookings
+   - Filter by date
+   - View guest contact, notes
+   - Export/Print booking logs
+
+6. **Admin Login (`admin-login.html`)**
+   - Admin credentials:
+     - ID: `bastoffcial@gmail.com`
+     - Password: `BookNeo@202512005`
+   - On success → `admin-dashboard.html`
+
+7. **Admin Dashboard (`admin-dashboard.html`)**
+   - Add/Edit/Delete hotel details
+   - Upload hotel photo (stored as base64 or link, file upload)
+   - Set room types (Suite, Deluxe, AC/Non-AC)
+   - Set hotel rate (INR)
+   - Assign hotel login for hotel login(User ID + Password)
+   - View entire booking logs across all hotels
+
+---
+
+💳 Cashfree Integration:
+- Integrate **Cashfree Web Checkout** in `guest-booking.html`
+- Use Production credentials:
+  - App ID: `9932874f93878c209926363eb3782399`
+  - Secret Key: `cfsk_ma_prod_ecee2e35c6aee2ed204a5aa421aed9df_4aaad1e2`
+- Redirect on payment success/failure
+- Log transaction status, ID, timestamp to **MongoDB**
+
+---
+
+🧠 Backend – MongoDB Only:
+- MongoDB Cluster:  
+  `mongodb+srv://bastoffcial:aI4fEcricKXwBZ4f@speedo.swuhr8z.mongodb.net/`
+- Collections:
+  - `hotels` – name, location, photo, room types, rates
+  - `users` – hotel staff login credentials
+  - `bookings` – guest info, hotel ID, dates, transaction info
+  - `admin` – admin credentials
+- Use Node.js + Express.js backend (or Replit server with `mongodb` package)
+
+---
+
+💡 BONUS FEATURES:
+- Generate **QR Code** for Booking ID with download option
+- Date range filters in dashboards
+- Optional: EmailJS for booking confirmations
+- Save booking history to localStorage or allow email search
+- Add **Dark Mode Toggle** for better UX on mobile
+
+---
+
+📱 Mobile-First UI:
+- Use **Tailwind CSS** or **Bootstrap**
+- Add viewport meta tag:
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
